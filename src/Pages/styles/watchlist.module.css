@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.watchlistContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-page);
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.watchlistCard {
+  width: 100%;
+  max-width: 480px;
+  background: var(--bg-card);
+  border-radius: 24px;
+  padding: 32px 28px;
+  box-shadow: var(--shadow-card);
+  animation: slideUp 0.5s ease-out;
+  direction: rtl;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.backBtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--bg-input);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.backBtn:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.backBtn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.sectionTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.section {
+  margin-bottom: 28px;
+}
+
+.currencyList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.currencyRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--bg-input);
+  border: 2px solid var(--border-color);
+  border-radius: 14px;
+  transition: all 0.2s ease;
+}
+
+.currencyRow:hover {
+  border-color: var(--accent-primary);
+}
+
+.currencyBadge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+  direction: ltr;
+}
+
+.currencyInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.currencyCode {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  direction: ltr;
+  text-align: right;
+}
+
+.currencyRate {
+  font-size: 12px;
+  color: var(--text-secondary);
+  direction: ltr;
+  text-align: right;
+}
+
+.starBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.starBtn svg {
+  width: 24px;
+  height: 24px;
+  transition: all 0.2s ease;
+}
+
+.starBtn:hover svg {
+  transform: scale(1.15);
+}
+
+.starActive svg {
+  fill: #f6ad55;
+  color: #f6ad55;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 30px 20px;
+  background: var(--bg-input);
+  border: 2px dashed var(--border-color);
+  border-radius: 14px;
+}
+
+.emptyState p {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.emptyIcon {
+  width: 36px;
+  height: 36px;
+  color: var(--text-muted);
+  margin: 0 auto 10px;
+}
+
+@media (max-width: 480px) {
+  .watchlistCard {
+    padding: 24px 20px;
+  }
+}

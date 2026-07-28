@@ -1,0 +1,65 @@
+/* src/theme.css */
+
+:root,
+[data-theme='light'] {
+  /* خلفيات */
+    --bg-page: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --bg-card: #ffffff;
+    --bg-screen: #f8f9fc;
+    --bg-input: #f7fafc;
+    --bg-item: #ffffff;
+
+  /* نصوص */
+    --text-primary: #1a202c;
+    --text-secondary: #718096;
+    --text-muted: #a0aec0;
+
+  /* حدود */
+    --border-color: #e2e8f0;
+    --border-light: #f0f0f0;
+
+  /* ألوان أساسية (زي ما هي، مش هتتغير بين الوضعين) */
+    --accent-primary: #667eea;
+    --accent-secondary: #764ba2;
+    --accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  /* حالات */
+    --success: #38a169;
+    --success-bg: #f0fff4;
+    --success-border: #9ae6b4;
+    --danger: #c53030;
+    --danger-bg: #fff5f5;
+    --danger-border: #feb2b2;
+
+  /* ظلال */
+    --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+[data-theme='dark'] {
+    --bg-page: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+    --bg-card: #1e2530;
+    --bg-screen: #161b24;
+    --bg-input: #232b38;
+    --bg-item: #232b38;
+
+    --text-primary: #f7fafc;
+    --text-secondary: #a0aec0;
+    --text-muted: #718096;
+
+    --border-color: #3a4558;
+    --border-light: #2d3748;
+
+    /* الألوان الأساسية بتفضل زي ما هي عشان الهوية البصرية تفضل ثابتة */
+    --accent-primary: #7c8ff0;
+    --accent-secondary: #8b5cb8;
+    --accent-gradient: linear-gradient(135deg, #7c8ff0 0%, #8b5cb8 100%);
+
+    --success: #48bb78;
+    --success-bg: #1c3829;
+    --success-border: #2f6b46;
+    --danger: #fc8181;
+    --danger-bg: #3a2020;
+    --danger-border: #742a2a;
+
+    --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.6);
+}

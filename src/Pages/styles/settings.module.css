@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.settingsContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-page);
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.settingsCard {
+  width: 100%;
+  max-width: 420px;
+  background: var(--bg-card);
+  border-radius: 24px;
+  padding: 32px 28px;
+  box-shadow: var(--shadow-card);
+  animation: slideUp 0.5s ease-out;
+  direction: rtl;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.backBtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--bg-input);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.backBtn:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.backBtn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* قسم واحد داخل الإعدادات */
+.section {
+  margin-bottom: 24px;
+}
+
+.sectionTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+/* صف الثيم */
+.settingRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-input);
+  border: 2px solid var(--border-color);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.settingLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.settingLabel svg {
+  width: 20px;
+  height: 20px;
+  color: var(--accent-primary);
+}
+
+.settingLabel span {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* مفتاح التبديل (Toggle Switch) */
+.toggleSwitch {
+  position: relative;
+  width: 48px;
+  height: 26px;
+  border-radius: 999px;
+  border: none;
+  background: var(--border-color);
+  cursor: pointer;
+  transition: background 0.25s ease;
+  flex-shrink: 0;
+}
+
+.toggleSwitch.active {
+  background: var(--accent-gradient);
+}
+
+.toggleKnob {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s ease;
+}
+
+.toggleSwitch.active .toggleKnob {
+  transform: translateX(-22px);
+}
+
+/* منطقة الخطر -- تصفير الحساب */
+.dangerZone {
+  border: 2px solid var(--danger-border);
+  border-radius: 14px;
+  padding: 18px;
+  background: var(--danger-bg);
+}
+
+.dangerTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--danger);
+  margin-bottom: 6px;
+}
+
+.dangerText {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.dangerBtn {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    color: var(--danger);
+    border: 2px solid var(--danger);
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.dangerBtn:hover:not(:disabled) {
+    background: var(--danger);
+    color: white;
+    }
+
+.dangerBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    }
+
+/* تأكيد الحذف (Confirmation) */
+.confirmBox {
+    margin-top: 12px;
+    padding: 12px;
+    background: var(--bg-card);
+    border: 2px dashed var(--danger-border);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.confirmBox p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.confirmActions {
+    display: flex;
+    gap: 8px;
+    }
+
+.confirmYesBtn {
+    flex: 1;
+    padding: 10px;
+    background: var(--danger);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.confirmNoBtn {
+    flex: 1;
+    padding: 10px;
+    background: var(--bg-input);
+    color: var(--text-secondary);
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.successMessage {
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: var(--success-bg);
+    border: 1px solid var(--success-border);
+    border-radius: 10px;
+    color: var(--success);
+    font-size: 13px;
+    text-align: center;
+    }
