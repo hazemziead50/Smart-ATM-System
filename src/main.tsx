@@ -6,7 +6,7 @@ import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter basename="/Smart-ATM-System"> {/* أضف basename */}
+    <BrowserRouter> 
       <App />
     </BrowserRouter>
   </StrictMode>,

@@ -18,7 +18,7 @@ function App() {
   sendUsersIfEmpty()
   },[])
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Smart-ATM-System">
     <ToastContainer/>
     <AppRoutes/>
     
