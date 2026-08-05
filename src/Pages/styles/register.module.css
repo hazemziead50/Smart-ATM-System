@@ -1,0 +1,311 @@
+:root {
+  /* خلفيات */
+    --bg-page: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --bg-card: #ffffff;
+    --bg-screen: #f8f9fc;
+    --bg-input: #f7fafc;
+    --bg-item: #ffffff;
+
+  /* نصوص */
+    --text-primary: #1a202c;
+    --text-secondary: #718096;
+    --text-muted: #a0aec0;
+
+  /* حدود */
+    --border-color: #e2e8f0;
+    --border-light: #f0f0f0;
+
+  
+    --accent-primary: #667eea;
+    --accent-secondary: #764ba2;
+    --accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  /* حالات */
+    --success: #38a169;
+    --success-bg: #f0fff4;
+    --success-border: #9ae6b4;
+    --danger: #c53030;
+    --danger-bg: #fff5f5;
+    --danger-border: #feb2b2;
+
+  /* ظلال */
+    --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+
+.registerContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.registerCard {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Header Styles */
+.registerHeader {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.systemBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--accent-gradient);
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 6px 25px rgba(102, 126, 234, 0.5);
+  }
+}
+
+.atmIcon {
+  width: 20px;
+  height: 20px;
+  color: var(--accent-primary);
+}
+
+.systemName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.logoContainer {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  color: var(--accent-primary);
+}
+
+.logoContainer h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+
+
+/* Form Styles */
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  direction : rtl;
+}
+
+.formGroup label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputWrapper .inputIcon {
+  position: absolute;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  color: #9ca3af;
+  pointer-events: none;
+  direction: rtl;
+}
+
+.inputWrapper input {
+  width: 100%;
+  padding: 12px 40px 12px 40px;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: #f9fafb;
+  color: #1f2937;
+}
+
+.inputWrapper input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+.inputWrapper input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.inputWrapper input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity:0;
+  position: absolute;
+  right: -5px;
+  width: 100%;
+  height: 20%;
+  cursor: pointer;
+}
+.inputWrapper input[type="date"] {
+  color-scheme: light;
+}
+
+.passwordToggle {
+  position: absolute;
+  left:15px ;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.passwordToggle svg {
+  width: 20px;
+  height: 20px;
+  fill: #9ca3af;
+  transition: fill 0.3s ease-in-out;
+}
+
+/* Error Message */
+.errorMessage {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  border-radius: 10px;
+  color: #dc2626;
+  font-size: 14px;
+}
+
+.errorMessage svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Register Button */
+.registerButton {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.registerButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
+}
+
+.registerButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Footer */
+.registerFooter {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.registerFooter a {
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 6px;
+  transition: color 0.3s ease;
+}
+
+.registerFooter a:hover {
+  color: #7c3aed;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .register-card {
+    padding: 24px;
+  }
+
+  .logo-container h1 {
+    font-size: 22px;
+  }
+
+  .input-wrapper input {
+    font-size: 13px;
+    padding: 10px 36px 10px 36px;
+  }
+}

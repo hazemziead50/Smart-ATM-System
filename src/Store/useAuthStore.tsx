@@ -16,6 +16,10 @@ const useAuthStore = create<AuthState>()(
         set({ user: null ,error:null});
     },
 
+    register: (userData: User) => {
+        set({ user: userData, error: null });
+    },
+
     login:async (username, pin)=>{
         set({isLoding: true, error: null })
         try {

@@ -27,6 +27,7 @@ export  interface AuthState {
     withdraw:(amount:number) =>  Promise<{success:boolean; message?:string}>
     transfer:(amount:number , recipient:User) => Promise <{success:boolean;message?:string}>
     resetAccount: () => Promise<{ success: boolean; message?: string }>
+    register:(userData:User)=> void
 }
 export interface BalanceCardProps {
     balance: number

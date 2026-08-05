@@ -1,5 +1,5 @@
 import useAuthStore from "../Store/useAuthStore";
-import { useNavigate } from "react-router-dom";
+import { useNavigate , Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./styles/login.css"; // Import the CSS file
 export default function Login() {
@@ -119,7 +119,7 @@ export default function Login() {
 
           <div className="login-footer">
             <span>ليس لديك حساب؟</span>
-            <a href="/register">إنشاء حساب جديد</a>
+            <Link to="/register">إنشاء حساب جديد</Link>
           </div>
         </form>
       </div>

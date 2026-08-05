@@ -11,12 +11,12 @@ function App() {
     document.documentElement.setAttribute('data-theme', theme)
   }, [theme])
 
-  const hasSend = useRef(false)
-  useEffect(()=>{
-  if(hasSend.current) return
-  hasSend.current = true
-  sendUsersIfEmpty()
-  },[])
+  // const hasSend = useRef(false)
+  // useEffect(()=>{
+  // if(hasSend.current) return
+  // hasSend.current = true
+  // sendUsersIfEmpty()
+  // },[])
   return (
     <BrowserRouter basename="/Smart-ATM-System">
     <ToastContainer/>

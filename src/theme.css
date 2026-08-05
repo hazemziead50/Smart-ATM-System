@@ -18,7 +18,7 @@
     --border-color: #e2e8f0;
     --border-light: #f0f0f0;
 
-  /* ألوان أساسية (زي ما هي، مش هتتغير بين الوضعين) */
+  
     --accent-primary: #667eea;
     --accent-secondary: #764ba2;
     --accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -49,7 +49,6 @@
     --border-color: #3a4558;
     --border-light: #2d3748;
 
-    /* الألوان الأساسية بتفضل زي ما هي عشان الهوية البصرية تفضل ثابتة */
     --accent-primary: #7c8ff0;
     --accent-secondary: #8b5cb8;
     --accent-gradient: linear-gradient(135deg, #7c8ff0 0%, #8b5cb8 100%);
