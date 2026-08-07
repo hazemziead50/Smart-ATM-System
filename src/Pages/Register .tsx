@@ -2,7 +2,7 @@ import { useState,useEffect } from "react"
 import { Link,useNavigate } from "react-router-dom"
 import { API_URL } from "../Utils/sendUsers"
 import useAuthStore from "../Store/useAuthStore"
-import '../theme.css'
+
 import styles from './styles/register.module.css'
 
 export default function Register(){
@@ -149,8 +149,8 @@ export default function Register(){
             <label htmlFor="username">اسم المستخدم</label>
 
             <div className={styles.inputWrapper}>
-              <svg className={styles.inputIcon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-              <path fill="rgb(116, 192, 252)" d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z"/>
+              <svg className={styles.inputIcon} fill="currentColor" viewBox="0 0 640 640">
+              <path  d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z"/>
               </svg>
               
             <input type="text"
@@ -176,8 +176,8 @@ export default function Register(){
             <label htmlFor="firstName"> الاسم الأول </label>
 
             <div className={styles.inputWrapper}>
-              <svg className={styles.inputIcon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-              <path fill="rgb(116, 192, 252)" d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z"/>
+              <svg className={styles.inputIcon} fill="currentColor" viewBox="0 0 640 640">
+              <path  d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z"/>
               </svg>
               
             <input type="text"
@@ -203,8 +203,8 @@ export default function Register(){
             <label htmlFor="lastName"> الاسم الأخير </label>
 
             <div className={styles.inputWrapper}>
-              <svg className={styles.inputIcon} viewBox="0 0 24 24">
-                <path fill="rgb(116, 192, 252)" d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+              <svg className={styles.inputIcon}  fill="currentColor" viewBox="0 0 24 24">
+                <path  d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
               </svg>
               
             <input type="text"
@@ -230,8 +230,8 @@ export default function Register(){
             <label htmlFor="birthDate">  تاريخ الميلاد </label>
 
             <div className={styles.inputWrapper}>
-              <svg className={styles.inputIcon} viewBox="0 0 448 512">
-              <path fill="rgb(116, 192, 252)" d="M120 0c13.3 0 24 10.7 24 24l0 40 160 0 0-40c0-13.3 10.7-24 24-24s24 10.7 24 24l0 40 32 0c35.3 0 64 28.7 64 64l0 288c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 128C0 92.7 28.7 64 64 64l32 0 0-40c0-13.3 10.7-24 24-24zM384 432c8.8 0 16-7.2 16-16l0-64-88
+              <svg className={styles.inputIcon} fill="currentColor" viewBox="0 0 448 512">
+              <path  d="M120 0c13.3 0 24 10.7 24 24l0 40 160 0 0-40c0-13.3 10.7-24 24-24s24 10.7 24 24l0 40 32 0c35.3 0 64 28.7 64 64l0 288c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 128C0 92.7 28.7 64 64 64l32 0 0-40c0-13.3 10.7-24 24-24zM384 432c8.8 0 16-7.2 16-16l0-64-88
                 0 0 80 72 0zm16-128l0-80-88 0 0 80 88 0zm-136 0l0-80-80 0 0 80 80 0zm-128 0l0-80-88 0 0 80 88 0zM48 352l0 64c0 8.8 7.2 16 16 16l72 0 0-80-88 0zm136 0l0 80 80 0 0-80-80 0zM120 112l-56 0c-8.8 0-16 7.2-16 16l0 48 352 0 0-48c0-8.8-7.2-16-16-16l-264 0z"/>
               </svg>
               
@@ -256,8 +256,8 @@ export default function Register(){
             <label htmlFor="password">  كلمة المرور  </label>
 
             <div className={styles.inputWrapper}>
-              <svg className={styles.inputIcon} viewBox="0 0 448 512" aria-hidden="true">
-                <path fill="rgb(116, 192, 252)" d="M144 144l0 48 160 0 0-48c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192l0-48C80 64.5 144.5 0 224 0s144 64.5 144 144l0 48 16 0c35.3 0 64 28.7 64 64l0 192c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 256c0-35.3
+              <svg className={styles.inputIcon} fill="currentColor" viewBox="0 0 448 512" aria-hidden="true">
+                <path d="M144 144l0 48 160 0 0-48c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192l0-48C80 64.5 144.5 0 224 0s144 64.5 144 144l0 48 16 0c35.3 0 64 28.7 64 64l0 192c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 256c0-35.3
                 28.7-64 64-64l16 0z"/>
               </svg>
             <input type={showPassword ? 'text':'password'}
@@ -300,8 +300,8 @@ export default function Register(){
             <label htmlFor="confirmPassword">  أعد أدخال كلمة المرور </label>
 
             <div className={styles.inputWrapper}>
-              <svg className={styles.inputIcon} viewBox="0 0 448 512" aria-hidden="true">
-                <path fill="rgb(116, 192, 252)" d="M144 144l0 48 160 0 0-48c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192l0-48C80 64.5 144.5 0 224 0s144 64.5 144 144l0 48 16 0c35.3 0 64 28.7 64 64l0 192c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 256c0-35.3
+              <svg className={styles.inputIcon} fill="currentColor" viewBox="0 0 448 512" aria-hidden="true">
+                <path  d="M144 144l0 48 160 0 0-48c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192l0-48C80 64.5 144.5 0 224 0s144 64.5 144 144l0 48 16 0c35.3 0 64 28.7 64 64l0 192c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 256c0-35.3
                 28.7-64 64-64l16 0z"/>
               </svg>
               

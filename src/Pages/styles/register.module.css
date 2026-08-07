@@ -10,7 +10,7 @@
 }
 
 .registerCard {
-  background: --bg-card;
+  background: var(--bg-card);
   border-radius: 20px;
   padding: 40px;
   width: 100%;
@@ -62,13 +62,16 @@
 .atmIcon {
   width: 20px;
   height: 20px;
-  color: var(--accent-primary);
+  color: white;
 }
 
 .systemName {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text-primary);
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .logoContainer {
@@ -244,10 +247,10 @@
 }
 
 .registerFooter a {
-  color: #4f46e5;
+  color: var(--accent-primary);
   text-decoration: none;
   font-weight: 600;
-  margin-right: 6px;
+  margin-right: 4px;
   transition: color 0.3s ease;
 }
 
