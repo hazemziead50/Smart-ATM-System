@@ -1,50 +1,16 @@
-:root {
-  /* خلفيات */
-    --bg-page: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --bg-card: #ffffff;
-    --bg-screen: #f8f9fc;
-    --bg-input: #f7fafc;
-    --bg-item: #ffffff;
-
-  /* نصوص */
-    --text-primary: #1a202c;
-    --text-secondary: #718096;
-    --text-muted: #a0aec0;
-
-  /* حدود */
-    --border-color: #e2e8f0;
-    --border-light: #f0f0f0;
-
-  
-    --accent-primary: #667eea;
-    --accent-secondary: #764ba2;
-    --accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-
-  /* حالات */
-    --success: #38a169;
-    --success-bg: #f0fff4;
-    --success-border: #9ae6b4;
-    --danger: #c53030;
-    --danger-bg: #fff5f5;
-    --danger-border: #feb2b2;
-
-  /* ظلال */
-    --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.3);
-    }
-
 
 .registerContainer {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--bg-page);
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .registerCard {
-  background: white;
+  background: --bg-card;
   border-radius: 20px;
   padding: 40px;
   width: 100%;
@@ -102,7 +68,7 @@
 .systemName {
   font-size: 14px;
   font-weight: 600;
-  color: #1f2937;
+  color: var(--text-primary);
 }
 
 .logoContainer {
@@ -125,9 +91,6 @@
     color: var(--text-primary);
     margin: 0;
 }
-
-
-
 /* Form Styles */
 .registerForm {
   display: flex;
@@ -145,7 +108,7 @@
 .formGroup label {
   font-size: 14px;
   font-weight: 600;
-  color: #374151;
+  color: var(--text-primary);
 }
 
 .inputWrapper {
@@ -159,7 +122,7 @@
   right: 8px;
   width: 20px;
   height: 20px;
-  color: #9ca3af;
+  color: var(--text-muted);
   pointer-events: none;
   direction: rtl;
 }
@@ -167,18 +130,18 @@
 .inputWrapper input {
   width: 100%;
   padding: 12px 40px 12px 40px;
-  border: 2px solid #e5e7eb;
+  border: 2px solid var(--border-color);
   border-radius: 10px;
   font-size: 14px;
   transition: all 0.3s ease;
-  background: #f9fafb;
-  color: #1f2937;
+  background: var(--bg-input);
+  color: var(--text-primary);
 }
 
 .inputWrapper input:focus {
   outline: none;
-  border-color: #4f46e5;
-  background: white;
+  border-color: var(--accent-primary);
+  background: var(--bg-card);
   box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
 }
 
@@ -212,7 +175,6 @@
   fill: #9ca3af;
   transition: fill 0.3s ease-in-out;
 }
-
 /* Error Message */
 .errorMessage {
   display: flex;
@@ -225,7 +187,6 @@
   color: #dc2626;
   font-size: 14px;
 }
-
 .errorMessage svg {
   width: 20px;
   height: 20px;
@@ -236,7 +197,7 @@
 .registerButton {
   width: 100%;
   padding: 14px;
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  background: var(--accent-gradient);
   color: white;
   border: none;
   border-radius: 10px;

@@ -1,9 +1,9 @@
 import {BrowserRouter} from 'react-router-dom'
 import AppRoutes from './Routers/router'
-import { useEffect, useRef } from 'react'
-import {sendUsersIfEmpty} from './Utils/sendUsers'
+import { useEffect } from 'react'
 import useThemeStore from './Store/useThemeStore'
 import ToastContainer from './Component/ToastContainer'
+import './theme.css'
 
 function App() {
   const theme = useThemeStore((state) => state.theme)
@@ -11,12 +11,6 @@ function App() {
     document.documentElement.setAttribute('data-theme', theme)
   }, [theme])
 
-  // const hasSend = useRef(false)
-  // useEffect(()=>{
-  // if(hasSend.current) return
-  // hasSend.current = true
-  // sendUsersIfEmpty()
-  // },[])
   return (
     <BrowserRouter basename="/Smart-ATM-System">
     <ToastContainer/>
