@@ -1,19 +1,46 @@
 import useAuthStore from "../Store/useAuthStore";
 import { useNavigate , Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, } from "react";
 import "./styles/login.css"; // Import the CSS file
 export default function Login() {
   const { user, isLoding, error, login, } = useAuthStore();
-  const [username, setUsername] = useState("");
-  const [pin, setPin] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [errors,setErrors] = useState<Record<string,string>>({})
   const navigate = useNavigate();
+  const [formData ,setFormData]= useState({
+    username:'',
+    pin:'',
+  })
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    await login(username, pin);
-  };
+    const validationErrors = validation()
+    if(Object.keys(validationErrors).length > 0){
+      setErrors(validationErrors)
+      return
+    }
+    await login(formData.username,formData. pin);
 
+  };
+  const validation = ()=>{
+    const newErrors: Record<string,string> = {}
+    if(formData.username.trim() === ''){
+      newErrors.username = 'أدخل اسم المستخدم '
+    }
+    if(formData.pin.trim()==='') newErrors.pin = 'أدخل كلمة المرور'
+    return newErrors
+  }
+  const handelChange = (e:React.ChangeEvent<HTMLInputElement>)=>{
+    const {name,value}=e.target
+    setFormData(prevData => ({
+      ...prevData , [name]:value
+    }))
+    if(errors[name]){
+      setErrors(prevErors=>({
+        ...prevErors , [name]:''
+      }))  
+    }
+  }
   useEffect(() => {
     if (user) {
       navigate("/dashboard");
@@ -50,14 +77,20 @@ export default function Login() {
               </svg>
               <input
                 id="username"
+                name="username"
                 type="text"
                 placeholder="أدخل اسم المستخدم"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                required
+                value={formData.username}
+                onChange={handelChange}
                 autoComplete="username"
                 disabled={isLoding}
               />
+              {errors.username && <div className="errorMessage">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>{errors.username}</span>
+                </div>}
             </div>
           </div>
 
@@ -69,14 +102,20 @@ export default function Login() {
               </svg>
               <input
                 id="pin"
+                name="pin"
                 type={showPassword ? "text" : "password"}
                 placeholder="أدخل كلمة المرور"
-                value={pin}
-                onChange={(e) => setPin(e.target.value)}
-                required
+                value={formData.pin}
+                onChange={handelChange}
                 autoComplete="current-password"
                 disabled={isLoding}
               />
+              {errors.pin && <div className="errorMessage">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>{errors.pin}</span>
+                </div>}
               <button
                 type="button"
                 className="password-toggle"

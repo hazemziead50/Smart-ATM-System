@@ -1,4 +1,4 @@
-import {BrowserRouter} from 'react-router-dom'
+import {HashRouter} from 'react-router-dom'
 import AppRoutes from './Routers/router'
 import { useEffect } from 'react'
 import useThemeStore from './Store/useThemeStore'
@@ -12,11 +12,11 @@ function App() {
   }, [theme])
 
   return (
-    <BrowserRouter basename="/Smart-ATM-System">
+    <HashRouter>
     <ToastContainer/>
     <AppRoutes/>
     
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
