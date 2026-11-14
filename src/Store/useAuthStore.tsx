@@ -23,7 +23,7 @@ const useAuthStore = create<AuthState>()(
     login:async (username, pin)=>{
         set({isLoding: true, error: null })
         try {
-            const response = await fetch('https://6a5fa2a9b1933e9d25fc8b66.mockapi.io/api/v1/users/Users')
+            const response = await fetch(API_URL)
             
             if (!response.ok) {
                 const message = await getApiErrorMessage(response, 'فشل الاتصال بالسيرفر')
