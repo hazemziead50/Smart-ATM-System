@@ -9,7 +9,7 @@ import History  from "../Pages/History";
 import Notfound from "../Pages/Notfound";
 import Settings from "../Pages/Settings";
 import Watchlist from '../Pages/Watchlist'
-import Register  from '../Pages/Register '
+import Register from "../Pages/Register";
 export default function AppRoutes (){
     return(
         <Routes>

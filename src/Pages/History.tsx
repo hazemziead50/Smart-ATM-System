@@ -1,6 +1,7 @@
 import styles from '../Pages/styles/history.module.css'
 import { useNavigate } from 'react-router-dom'
 import useAuthStore from '../Store/useAuthStore'
+import { useTransactionHistory } from '../hooks/useTransactionHistory'
 import type { Transaction } from '../Types/types'
 import { useState } from 'react'
 const ITEMS_PER_PAGE = 5
@@ -81,10 +82,14 @@ export default function History() {
     const user = useAuthStore((state) => state.user)
     const navigate = useNavigate()
     const [currentPage, setCurrentPage] = useState(1)
-
+    const { data: serverTransactions, isLoading, isError } = useTransactionHistory(user?.id)
     if (!user) return null
 
-    const transactions = [...(user.transactions ?? [])].sort(
+    if(isLoading)return <div className={styles.historyContainer}>جاري تحميل سجل العمليات...</div>
+    if(isError) return <div className={styles.historyContainer}>حدث خطأ أثناء جلب العمليات</div>
+    const rawTransactions = serverTransactions??user.transactions??[]
+    
+    const transactions = [...(rawTransactions ?? [])].sort(
         (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
     )
 
